@@ -5,7 +5,7 @@ angular.module('sciprop', [
   'ui.router',
   'ngResource',
   'ngCookies',
-  //'sciprop.services',
+  'sciprop.services',
   'sciprop.controllers'
 ])
 	.config(function ($interpolateProvider, $httpProvider, $resourceProvider, $stateProvider, $urlRouterProvider) {
@@ -26,15 +26,21 @@ angular.module('sciprop', [
 
     // Routing
     $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'static/views/index.html',
-        controller: 'HomeCtrl'
-      });
+		.state('home', {
+        	url: '/',
+			templateUrl: 'static/views/index.html',
+			controller: 'HomeCtrl'
+      	})
+		.state('campaign_dashboard', {
+        	url: '/campaign_dashboard/',
+			templateUrl: 'static/views/campaign_dashboard.html',
+			controller: 'CampaignDashBoardCtrl'
+      	});
+
 
 	$urlRouterProvider.otherwise('/');
 
 	//Interceptor to handle bad request,response...
-	//$httpProvider.interceptors.push('APIInterceptor');
+	$httpProvider.interceptors.push('APIInterceptor');
 
   });
