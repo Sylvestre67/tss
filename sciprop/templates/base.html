@@ -19,14 +19,16 @@
 		<div class="row">
 			<div class="col-xs-2">
 				<h3>SciProp</h3>
-				<ul class="list-unstyled">
+				<ul class="main-nav list-unstyled">
 					<li ui-sref-active="active"><a ui-sref="home"><i class ="fa fa-home"></i> Home</a></li>
 					<li ui-sref-active="active"><a ui-sref="campaign_dashboard"><i class ="fa fa-home"></i> Campaign</a></li>
 				</ul>
 			</div>
 			<div class="col-xs-10">
 				<div class="content">
-					<div ui-view></div>
+					{% verbatim %}
+						<div ui-view></div>
+					{% endverbatim %}
 				</div>
 			</div>
 		</div>
@@ -38,6 +40,12 @@
 	<script type="text/javascript" src="{% static 'js/angular/angular-cookies.min.js' %}"></script>
 
 	<script type="text/javascript" src="{% static 'js/angular/angular-ui-router.min.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'js/angular/angular-sanitize.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/tv4.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/ObjectPath.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/schema-form.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap-decorator.min.js'%}"></script>
 
 	<script type="text/javascript" src="{% static 'js/sciprop_app.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/sciprop_services.js' %}"></script>

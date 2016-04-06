@@ -1,3 +1,5 @@
+@import (reference) '../../../bower_components/bootstrap/less/variables.less';
+
 /* GOOGLE FONTS */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
@@ -19,3 +21,16 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.main-nav{
+	background-color:@gray-lighter;
+	& li {
+		& a{
+			text-decoration:none;
+		}
+		&.active {
+			& a{
+			color:red;
+			}
+		}
+	}
+}

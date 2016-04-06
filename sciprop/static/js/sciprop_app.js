@@ -2,16 +2,17 @@
  * Created by gugs on 4/5/16.
  */
 angular.module('sciprop', [
-  'ui.router',
-  'ngResource',
-  'ngCookies',
-  'sciprop.services',
-  'sciprop.controllers'
+    'ui.router',
+    'ngResource',
+    'ngCookies',
+    'sciprop.services',
+    'sciprop.controllers',
+	'schemaForm'
 ])
 	.config(function ($interpolateProvider, $httpProvider, $resourceProvider, $stateProvider, $urlRouterProvider) {
     // Force angular to use square brackets for template tag
     // The alternative is using {% verbatim %}
-    $interpolateProvider.startSymbol('[[').endSymbol(']]');
+    //$interpolateProvider.startSymbol('[[').endSymbol(']]');
 
     // CSRF Support
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
@@ -35,6 +36,11 @@ angular.module('sciprop', [
         	url: '/campaign_dashboard/',
 			templateUrl: 'static/views/campaign_dashboard.html',
 			controller: 'CampaignDashBoardCtrl'
+      	})
+		.state('campaign_details', {
+        	url: '/campaign/:campaignId',
+			templateUrl: 'static/views/campaign_details.html',
+			controller: 'CampaignDetailsCtrl'
       	});
 
 

@@ -15,4 +15,4 @@ class  GroupSerializer(serializers.HyperlinkedModelSerializer):
 class ProposalCampaignSerializer(serializers.HyperlinkedModelSerializer):
      class Meta:
         model = ProposalCampaign
-        fields = ('url','name','publication_date','deadline_date','status','template','forms','emails')
+        fields = ('url','name','publication_date','deadline_date','status','template','forms','emails','pk')

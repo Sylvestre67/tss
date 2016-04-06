@@ -15,9 +15,8 @@ class ProposalCampaign(models.Model):
     deadline_date = models.DateField(null=True,blank=True)
     status = models.CharField(max_length=255,default='draft',choices=PROPOSAL_STATUS_CHOICES)
     template = models.FileField(upload_to='campaign',null=True,blank=True)
-    forms = JSONField()
-    emails = JSONField()
+    forms = JSONField(blank=True,null=True)
+    emails = JSONField(blank=True,null=True)
 
     def __unicode__(self):
         return self.name
-

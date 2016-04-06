@@ -16,3 +16,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.main-nav {
+  background-color: #eeeeee;
+}
+.main-nav li a {
+  text-decoration: none;
+}
+.main-nav li.active a {
+  color: red;
+}

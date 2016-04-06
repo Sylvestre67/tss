@@ -4,9 +4,11 @@
 
 angular.module('sciprop.services', ['ngResource'])
 	.factory('Campaign', function($resource) {
-		return $resource('/api/proposal_campaign/:id/',null,{
-			'update' : { method:'PATCH'}
-		});
+		return $resource('/api/proposal_campaign/:id/',null,
+			{
+				'update' : {method:'PATCH'}
+			}
+		);
   	})
     .factory('User', function($resource) {
     	return $resource('/api/users/:id/');

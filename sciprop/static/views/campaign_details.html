@@ -1,0 +1,28 @@
+	<h3> {{ campaign.name }}</h3>
+	<p>{{ campaign.status }}</p>
+	<p>{{ campaign }}</p>
+
+	<h5>Forms</h5>
+	<p>{{ campaign.forms }}</p>
+
+	<p>Current: {{ field_form }}</p>
+
+	<div class="row">
+		<div class="col-xs-6">
+			<h5>Main Form Preview</h5>
+			<form sf-schema="main_form_schema" sf-form="main_form" sf-model="field_form"></form>
+		</div>
+	</div>
+
+
+	<!--<form ng-submit="submitFieldForForm(field_form,'main_form')">
+
+		Label:<input type="text" ng-model="field_form.label" />
+		Required:<input type="checkbox" ng-model="field_form.required" value="required" />
+
+		<input type="submit" name="submit" />
+	</form>-->
+
+	<h5>Emails</h5>
+	<p>{{ campaign.emails }}</p>
+
