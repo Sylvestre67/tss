@@ -1,7 +1,7 @@
-	<h3>[[ header ]]</h3>
+	<h3>{{ header }}</h3>
 
 	<ul class="list-unstyled" ng-repeat="campaign in list_of_campaigns track by campaign.pk">
-		<li> <a ui-sref="campaign_details({ campaignId: campaign.pk })">[[ campaign.name ]]</a></li>
+		<li> <a ui-sref="campaign_details({ campaignId: campaign.pk })">{{ campaign.name }}</a></li>
 	</ul>
 
 

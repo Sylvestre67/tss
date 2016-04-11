@@ -5,9 +5,13 @@ angular.module('sciprop', [
     'ui.router',
     'ngResource',
     'ngCookies',
+
+
+	'slugifier',
+	'schemaForm',
+
     'sciprop.services',
-    'sciprop.controllers',
-	'schemaForm'
+    'sciprop.controllers'
 ])
 	.config(function ($interpolateProvider, $httpProvider, $resourceProvider, $stateProvider, $urlRouterProvider) {
     // Force angular to use square brackets for template tag
